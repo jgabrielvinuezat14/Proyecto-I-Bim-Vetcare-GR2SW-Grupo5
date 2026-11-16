@@ -1,0 +1,48 @@
+/* ==========================================================
+   VetCare · Hoja de estilos única (todas las pantallas)
+   Organización: variables, base, clases utilitarias,
+   componentes, formularios, tablas y diseño adaptable.
+   ========================================================== */
+
+/* ---------- 1. Fuente web y variables ---------- */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+
+:root {
+  /* Colores (contraste AA sobre fondo claro) */
+  --color-primario: hsl(196, 78%, 27%);
+  --color-primario-oscuro: hsl(196, 79%, 19%);
+  --color-acento: hsl(150, 59%, 30%);
+  --color-peligro: hsl(4, 76%, 40%);
+  --color-peligro-oscuro: hsl(4, 77%, 32%);
+  --color-texto: hsl(213, 28%, 16%);
+  --color-texto-suave: hsl(212, 17%, 35%);
+  --color-fondo: hsl(210, 37%, 97%);
+  --color-superficie: hsl(0, 0%, 100%);
+  --color-borde: hsl(210, 23%, 83%);
+  --color-fila-par: hsl(204, 42%, 95%);
+  --color-fila-hover: hsl(201, 49%, 91%);
+  --color-foco: hsl(42, 100%, 47%);
+  --color-fondo-invalido: hsl(5, 76%, 97%);
+
+  /* Tipografía */
+  --fuente-base: "Nunito", "Segoe UI", Arial, sans-serif;
+  --fuente-mono: "Courier New", monospace;
+  --texto-sm: 0.85rem;
+  --texto-md: 1rem;
+  --texto-lg: 1.25rem;
+  --texto-xl: 1.5rem;
+  --texto-titulo: 1.75rem;
+
+  /* Espaciados */
+  --espacio-xs: 0.25rem;
+  --espacio-s: 0.5rem;
+  --espacio-m: 1rem;
+  --espacio-l: 1.5rem;
+  --espacio-xl: 2.5rem;
+
+  /* Bordes, sombras y transiciones */
+  --radio: 0.5rem;
+  --radio-total: 1rem;
+  --sombra: 0 2px 8px hsla(196, 78%, 27%, 0.12);
+  --transicion: 0.2s ease-in-out;
+}
