@@ -231,6 +231,83 @@ textarea:focus-visible {
 /* ---------- 10. Componentes: tarjetas, fichas y estados ---------- */
 
 /* ---------- 11. Formularios y validación ---------- */
+fieldset {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: var(--espacio-m);
+  margin: 0;
+  padding: var(--espacio-l);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  background-color: var(--color-superficie);
+}
+
+legend {
+  padding: 0 var(--espacio-s);
+  font-weight: 700;
+  color: var(--color-primario-oscuro);
+}
+
+label {
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  padding: var(--espacio-s);
+  border: 2px solid var(--color-borde);
+  border-radius: var(--radio);
+  font: inherit;
+  color: var(--color-texto);
+  background-color: var(--color-superficie);
+  transition: border-color var(--transicion);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: 1.2rem;
+  height: 1.2rem;
+  accent-color: var(--color-primario);
+}
+
+input[type="date"],
+input[type="time"] {
+  min-width: 10rem;
+}
+
+input[inputmode="numeric"] {
+  letter-spacing: 0.08em;
+}
+
+input[readonly] {
+  background-color: var(--color-fondo);
+  color: var(--color-texto-suave);
+}
+
+input:required,
+select:required,
+textarea:required {
+  border-left-width: 6px;
+}
+
+input:valid:not(:placeholder-shown),
+textarea:valid:not(:placeholder-shown) {
+  border-color: var(--color-acento);
+}
+
+input:invalid:focus,
+select:invalid:focus,
+textarea:invalid:focus {
+  border-color: var(--color-peligro);
+}
+
+input:user-invalid,
+select:user-invalid,
+textarea:user-invalid {
+  border-color: var(--color-peligro);
+  background-color: var(--color-fondo-invalido);
+}
 
 /* ---------- 12. Tablas ---------- */
 
