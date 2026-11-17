@@ -310,6 +310,47 @@ textarea:user-invalid {
 }
 
 /* ---------- 12. Tablas ---------- */
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--color-superficie);
+  box-shadow: var(--sombra);
+}
+
+.tabla caption {
+  padding: var(--espacio-s);
+  font-weight: 700;
+  text-align: left;
+  color: var(--color-primario-oscuro);
+}
+
+.tabla th,
+.tabla td {
+  padding: var(--espacio-s) var(--espacio-m);
+  border-bottom: 1px solid var(--color-borde);
+  text-align: left;
+}
+
+.tabla thead th {
+  color: var(--color-superficie);
+  background-color: var(--color-primario);
+}
+
+.tabla th[scope="row"] {
+  white-space: nowrap;
+}
+
+.tabla tbody tr {
+  transition: background-color var(--transicion);
+}
+
+.tabla tbody tr:nth-child(even) {
+  background-color: var(--color-fila-par);
+}
+
+.tabla tbody tr:hover {
+  background-color: var(--color-fila-hover);
+}
 
 /* ---------- 13. Diseño adaptable: móvil (hasta 48rem) ---------- */
 
