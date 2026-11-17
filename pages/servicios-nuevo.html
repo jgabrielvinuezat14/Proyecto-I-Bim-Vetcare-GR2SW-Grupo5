@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuevo servicio | VetCare</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+  <header class="flex flex-envolver items-centro justify-espaciado gap-m py-m px-l fondo-primario movil-columna movil-items-inicio">
+    <a class="texto-xl texto-negrita color-texto-blanco sin-subrayado" href="admin-inicio.html">VetCare <span class="bloque texto-sm texto-normal">Clínica Huellitas</span></a>
+    <nav aria-label="Menú del administrador">
+      <ul class="flex flex-envolver gap-s lista-sin-estilo">
+        <li><a class="menu-enlace" href="admin-inicio.html">Inicio</a></li>
+        <li><a class="menu-enlace" href="veterinarios-listado.html">Veterinarios</a></li>
+        <li><a class="menu-enlace" href="servicios-listado.html">Servicios</a></li>
+        <li><a class="menu-enlace borde-blanco" href="../index.html">Cerrar sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="contenido">
+    <section>
+      <h1>Nuevo servicio</h1>
+      <p>El nombre debe ser único y el precio estar entre $1,00 y $500,00.</p>
+      <form action="servicios-listado.html" method="get" class="grid gap-l">
+        <fieldset>
+          <legend>Datos del servicio</legend>
+          <div class="flex flex-columna gap-xs">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required minlength="3" maxlength="60" title="Nombre único del servicio" placeholder="Consulta general">
+          </div>
+          <div class="flex flex-columna gap-xs">
+            <label for="precio">Precio (USD)</label>
+            <input type="number" id="precio" name="precio" required min="1.00" max="500.00" step="0.01" placeholder="25.00">
+          </div>
+          <div class="flex flex-columna gap-xs">
+            <label for="duracion">Duración (minutos)</label>
+            <input type="number" id="duracion" name="duracion" required min="30" max="180" step="30" placeholder="30">
+          </div>
+          <div class="flex flex-columna gap-xs col-completa">
+            <label for="descripcion">Descripción</label>
+            <textarea id="descripcion" name="descripcion" rows="3" maxlength="200" placeholder="Qué incluye el servicio"></textarea>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Disponibilidad</legend>
+          <fieldset class="flex flex-envolver items-centro gap-s p-m">
+            <legend>Especies atendidas</legend>
+            <input type="checkbox" id="esp-perro" name="especies" value="Perro">
+            <label for="esp-perro">Perro</label>
+            <input type="checkbox" id="esp-gato" name="especies" value="Gato">
+            <label for="esp-gato">Gato</label>
+            <input type="checkbox" id="esp-ave" name="especies" value="Ave">
+            <label for="esp-ave">Ave</label>
+            <input type="checkbox" id="esp-roedor" name="especies" value="Roedor">
+            <label for="esp-roedor">Roedor</label>
+            <input type="checkbox" id="esp-otro" name="especies" value="Otro">
+            <label for="esp-otro">Otro</label>
+          </fieldset>
+          <div class="flex items-centro gap-s">
+            <input type="checkbox" id="disponible" name="disponible" checked>
+            <label for="disponible">Disponible para agendar</label>
+          </div>
+        </fieldset>
+        <div class="flex flex-envolver gap-m mt-m">
+          <button type="submit" class="boton">Guardar</button>
+          <a class="boton boton-secundario" href="servicios-listado.html">Cancelar</a>
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer class="p-m texto-centrado color-texto-blanco fondo-primario-oscuro">
+    <p>VetCare · Clínica veterinaria “Huellitas” · Quito, 2026</p>
+  </footer>
+</body>
+</html>
