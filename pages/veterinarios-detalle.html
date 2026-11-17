@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle del veterinario | VetCare</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+  <header class="flex flex-envolver items-centro justify-espaciado gap-m py-m px-l fondo-primario movil-columna movil-items-inicio">
+    <a class="texto-xl texto-negrita color-texto-blanco sin-subrayado" href="admin-inicio.html">VetCare <span class="bloque texto-sm texto-normal">Clínica Huellitas</span></a>
+    <nav aria-label="Menú del administrador">
+      <ul class="flex flex-envolver gap-s lista-sin-estilo">
+        <li><a class="menu-enlace" href="admin-inicio.html">Inicio</a></li>
+        <li><a class="menu-enlace" href="veterinarios-listado.html">Veterinarios</a></li>
+        <li><a class="menu-enlace" href="servicios-listado.html">Servicios</a></li>
+        <li><a class="menu-enlace borde-blanco" href="../index.html">Cerrar sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="contenido">
+    <section>
+      <h1>Detalle del veterinario</h1>
+      <article class="p-l redondeado fondo-superficie sombra">
+        <h2 class="color-texto-primario-oscuro">Dra. Sofía Benítez</h2>
+        <dl class="datos">
+        <dt>Cédula</dt>
+        <dd>1711122233</dd>
+        <dt>Especialidad</dt>
+        <dd>Medicina general</dd>
+        <dt>Celular</dt>
+        <dd>0991112233</dd>
+        <dt>Correo</dt>
+        <dd>sbenitez@huellitas.ec</dd>
+        <dt>Estado</dt>
+        <dd>Activo</dd>
+        </dl>
+      </article>
+      <table class="tabla">
+        <caption>Horario de atención</caption>
+        <thead>
+          <tr>
+            <th scope="col">Día</th>
+            <th scope="col">Desde</th>
+            <th scope="col">Hasta</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Lunes</th>
+            <td>08:00</td>
+            <td>17:00</td>
+          </tr>
+          <tr>
+            <th scope="row">Martes</th>
+            <td>08:00</td>
+            <td>17:00</td>
+          </tr>
+          <tr>
+            <th scope="row">Miércoles</th>
+            <td>08:00</td>
+            <td>17:00</td>
+          </tr>
+          <tr>
+            <th scope="row">Jueves</th>
+            <td>08:00</td>
+            <td>17:00</td>
+          </tr>
+          <tr>
+            <th scope="row">Viernes</th>
+            <td>08:00</td>
+            <td>17:00</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="flex flex-envolver gap-m mt-m">
+        <a class="boton" href="veterinarios-editar.html">Editar</a>
+        <a class="boton boton-secundario" href="veterinarios-listado.html">Volver</a>
+      </div>
+    </section>
+  </main>
+  <footer class="p-m texto-centrado color-texto-blanco fondo-primario-oscuro">
+    <p>VetCare · Clínica veterinaria “Huellitas” · Quito, 2026</p>
+  </footer>
+</body>
+</html>
