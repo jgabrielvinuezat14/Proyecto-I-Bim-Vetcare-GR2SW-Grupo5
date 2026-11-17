@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi agenda del día | VetCare</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+  <header class="flex flex-envolver items-centro justify-espaciado gap-m py-m px-l fondo-primario movil-columna movil-items-inicio">
+    <a class="texto-xl texto-negrita color-texto-blanco sin-subrayado" href="veterinario-inicio.html">VetCare <span class="bloque texto-sm texto-normal">Clínica Huellitas</span></a>
+    <nav aria-label="Menú del veterinario">
+      <ul class="flex flex-envolver gap-s lista-sin-estilo">
+        <li><a class="menu-enlace" href="veterinario-inicio.html">Inicio</a></li>
+        <li><a class="menu-enlace" href="agenda-dia.html" aria-current="page">Mi agenda</a></li>
+        <li><a class="menu-enlace" href="historial-clinico.html">Historial clínico</a></li>
+        <li><a class="menu-enlace borde-blanco" href="../index.html">Cerrar sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="contenido">
+    <section>
+      <h1>Mi agenda del día</h1>
+      <form action="agenda-dia.html" method="get" class="flex flex-envolver items-centro gap-s mb-m movil-columna movil-estirar">
+        <label for="fecha">Fecha</label>
+        <input type="date" id="fecha" name="fecha" required value="2026-11-18">
+        <input type="checkbox" id="todas" name="todas">
+        <label for="todas">Mostrar también atendidas y canceladas</label>
+        <button type="submit" class="boton boton-secundario">Ver agenda</button>
+      </form>
+    </section>
+  </main>
+  <footer class="p-m texto-centrado color-texto-blanco fondo-primario-oscuro">
+    <p>VetCare · Clínica veterinaria “Huellitas” · Quito, 2026</p>
+  </footer>
+</body>
+</html>
