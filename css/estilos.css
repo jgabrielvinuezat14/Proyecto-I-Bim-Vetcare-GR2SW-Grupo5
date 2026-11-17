@@ -353,5 +353,25 @@ textarea:user-invalid {
 }
 
 /* ---------- 13. Diseño adaptable: móvil (hasta 48rem) ---------- */
+```css
+@media (max-width: 48rem) {
+  .movil-columna { flex-direction: column; }
+  .movil-items-inicio { align-items: flex-start; }
+  .movil-estirar { align-items: stretch; }
+  .flex-crecer { flex-basis: auto; }
+
+  .contenido {
+    padding: var(--espacio-m);
+  }
+
+  .tabla {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .datos {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* ---------- 14. Diseño adaptable: escritorio (desde 64rem) ---------- */
