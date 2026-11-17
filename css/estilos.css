@@ -162,6 +162,56 @@ h2{
 
 /* ---------- 10. Componentes: tarjetas, fichas y estados ---------- */
 
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-s);
+  padding: var(--espacio-l);
+  border-top: 6px solid var(--color-primario);
+  border-radius: var(--radio);
+  background-color: var(--color-superficie);
+  box-shadow: var(--sombra);
+  transition: transform var(--transicion), box-shadow var(--transicion);
+}
+
+.tarjeta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px hsla(196, 78%, 27%, 0.2);
+}
+
+.tarjeta:nth-child(even) {
+  border-top-color: var(--color-acento);
+}
+
+.tarjeta .boton {
+  margin-top: auto;
+  text-align: center;
+}
+
+.datos {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: var(--espacio-s) var(--espacio-l);
+  margin: 0;
+}
+
+.datos dt {
+  font-weight: 700;
+}
+
+.datos dd {
+  margin: 0;
+}
+
+.estado {
+  display: inline-block;
+  padding: var(--espacio-xs) var(--espacio-s);
+  border-radius: var(--radio-total);
+  font-size: var(--texto-sm);
+  font-weight: 700;
+  color: var(--color-superficie);
+}
+
 /* ---------- 11. Formularios y validación ---------- */
 
 /* ---------- 12. Tablas ---------- */
