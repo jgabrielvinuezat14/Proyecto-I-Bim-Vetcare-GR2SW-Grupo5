@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de la mascota | VetCare</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+<header class="flex flex-envolver items-centro justify-espaciado gap-m py-m px-l fondo-primario movil-columna movil-items-inicio">
+    <a class="texto-xl texto-negrita color-texto-blanco sin-subrayado" href="recepcion-inicio.html">VetCare <span class="bloque texto-sm texto-normal">Clínica Huellitas</span></a>
+    <nav aria-label="Menú de recepción">
+        <ul class="flex flex-envolver gap-s lista-sin-estilo">
+            <li><a class="menu-enlace" href="recepcion-inicio.html">Inicio</a></li>
+            <li><a class="menu-enlace" href="propietarios-listado.html">Propietarios</a></li>
+            <li><a class="menu-enlace" href="mascotas-listado.html">Mascotas</a></li>
+            <li><a class="menu-enlace" href="citas-nueva.html">Agendar cita</a></li>
+            <li><a class="menu-enlace" href="citas-listado.html">Citas</a></li>
+            <li><a class="menu-enlace borde-blanco" href="../index.html">Cerrar sesión</a></li>
+        </ul>
+    </nav>
+</header>
+<main class="contenido">
+    <section>
+        <h1>Detalle de la mascota</h1>
+        <article class="p-l redondeado fondo-superficie sombra">
+            <h2 class="color-texto-primario-oscuro">Toby</h2>
+            <dl class="datos">
+                <dt>Especie</dt>
+                <dd>Perro</dd>
+                <dt>Raza</dt>
+                <dd>Labrador</dd>
+                <dt>Sexo</dt>
+                <dd>Macho</dd>
+                <dt>Fecha de nacimiento</dt>
+                <dd>2020-03-15</dd>
+                <dt>Peso</dt>
+                <dd>28.5 kg</dd>
+                <dt>Esterilizado</dt>
+                <dd>Sí</dd>
+                <dt>Propietario</dt>
+                <dd>Carlos Andrade Mora (1712345678)</dd>
+            </dl>
+        </article>
+    </section>
+    <section>
+        <h2>Próximas citas</h2>
+        <table class="tabla">
+            <caption>Citas programadas de Toby</caption>
+            <thead>
+            <tr>
+                <th scope="col">Fecha</th>
+                <th scope="col">Hora</th>
+                <th scope="col">Servicio</th>
+                <th scope="col">Veterinario</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">2026-11-18</th>
+                <td>09:00</td>
+                <td>Consulta general</td>
+                <td>Dra. Sofía Benítez</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="flex flex-envolver gap-m mt-m">
+            <a class="boton" href="mascotas-editar.html">Editar</a>
+            <a class="boton boton-secundario" href="mascotas-listado.html">Volver</a>
+        </div>
+    </section>
+</main>
+<footer class="p-m texto-centrado color-texto-blanco fondo-primario-oscuro">
+    <p>VetCare · Clínica veterinaria “Huellitas” · Quito, 2026</p>
+</footer>
+</body>
+</html>
