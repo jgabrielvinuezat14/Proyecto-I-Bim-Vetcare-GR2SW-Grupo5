@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar propietario - VetCare</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+  <header class="flex flex-envolver items-centro justify-espaciado gap-m py-m px-l fondo-primario movil-columna movil-items-inicio">
+    <a class="texto-xl texto-negrita color-texto-blanco sin-subrayado" href="recepcion-inicio.html">VetCare <span class="bloque texto-sm texto-normal">Clínica Huellitas</span></a>
+    <nav aria-label="Menú de recepción">
+      <ul class="flex flex-envolver gap-s lista-sin-estilo">
+        <li><a class="menu-enlace" href="recepcion-inicio.html">Inicio</a></li>
+        <li><a class="menu-enlace" href="propietarios-listado.html">Propietarios</a></li>
+        <li><a class="menu-enlace" href="mascotas-listado.html">Mascotas</a></li>
+        <li><a class="menu-enlace" href="citas-nueva.html">Agendar cita</a></li>
+        <li><a class="menu-enlace" href="citas-listado.html">Citas</a></li>
+        <li><a class="menu-enlace borde-blanco" href="../index.html">Cerrar sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="contenido">
+    <section>
+      <h1>Editar propietario</h1>
+      <p>La cédula no se puede modificar porque identifica al propietario.</p>
+      <form action="propietarios-listado.html" method="get" class="grid gap-l">
+        <fieldset>
+          <legend>Datos personales</legend>
+          <div class="flex flex-columna gap-xs">
+            <label for="cedula">Cédula</label>
+            <input type="text" id="cedula" name="cedula" inputmode="numeric" required pattern="[0-9]{10}" maxlength="10" title="Exactamente 10 dígitos numéricos" placeholder="1712345678" autocomplete="off" value="1712345678" readonly>
+          </div>
+          <div class="flex flex-columna gap-xs">
+            <label for="nombres">Nombres</label>
+            <input type="text" id="nombres" name="nombres" required pattern="[A-Za-zÁÉÍÓÚáéíóúÑñÜü ]{2,50}" minlength="2" maxlength="50" title="Solo letras y espacios, de 2 a 50 caracteres" placeholder="Carlos" autocomplete="given-name" value="Carlos">
+          </div>
+          <div class="flex flex-columna gap-xs">
+            <label for="apellidos">Apellidos</label>
+            <input type="text" id="apellidos" name="apellidos" required pattern="[A-Za-zÁÉÍÓÚáéíóúÑñÜü ]{2,50}" minlength="2" maxlength="50" title="Solo letras y espacios, de 2 a 50 caracteres" placeholder="Andrade Mora" autocomplete="family-name" value="Andrade Mora">
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Datos de contacto</legend>
+          <div class="flex flex-columna gap-xs">
+            <label for="celular">Celular</label>
+            <input type="tel" id="celular" name="celular" required pattern="09[0-9]{8}" title="10 dígitos que empiezan con 09" placeholder="0991234567" autocomplete="tel" value="0991234567">
+          </div>
+          <div class="flex flex-columna gap-xs">
+            <label for="fijo">Teléfono fijo (opcional)</label>
+            <input type="tel" id="fijo" name="fijo" pattern="0[2-7][0-9]{7}" title="9 dígitos con código de provincia, por ejemplo 022345678" placeholder="022345678">
+          </div>
+          <div class="flex flex-columna gap-xs">
+            <label for="correo">Correo</label>
+            <input type="email" id="correo" name="correo" required maxlength="100" placeholder="nombre@correo.ec" autocomplete="email" value="carlos.andrade@correo.ec">
+          </div>
+          <div class="flex flex-columna gap-xs col-completa">
+            <label for="direccion">Dirección</label>
+            <input type="text" id="direccion" name="direccion" maxlength="150" placeholder="Av. 10 de Agosto N24-15" autocomplete="address-line1" value="Av. 10 de Agosto N24-15">
+          </div>
+        </fieldset>
+        <div class="flex flex-envolver gap-m mt-m">
+          <button type="submit" class="boton">Guardar cambios</button>
+          <a class="boton boton-secundario" href="propietarios-listado.html">Cancelar</a>
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer class="p-m texto-centrado color-texto-blanco fondo-primario-oscuro">
+    <p>VetCare · Clínica veterinaria “Huellitas” · Quito, 2026</p>
+  </footer>
+</body>
+</html>

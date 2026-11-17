@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle del propietario - VetCare</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+  <header class="flex flex-envolver items-centro justify-espaciado gap-m py-m px-l fondo-primario movil-columna movil-items-inicio">
+    <a class="texto-xl texto-negrita color-texto-blanco sin-subrayado" href="recepcion-inicio.html">VetCare <span class="bloque texto-sm texto-normal">Clínica Huellitas</span></a>
+    <nav aria-label="Menú de recepción">
+      <ul class="flex flex-envolver gap-s lista-sin-estilo">
+        <li><a class="menu-enlace" href="recepcion-inicio.html">Inicio</a></li>
+        <li><a class="menu-enlace" href="propietarios-listado.html">Propietarios</a></li>
+        <li><a class="menu-enlace" href="mascotas-listado.html">Mascotas</a></li>
+        <li><a class="menu-enlace" href="citas-nueva.html">Agendar cita</a></li>
+        <li><a class="menu-enlace" href="citas-listado.html">Citas</a></li>
+        <li><a class="menu-enlace borde-blanco" href="../index.html">Cerrar sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="contenido">
+    <section>
+      <h1>Detalle del propietario</h1>
+      <article class="p-l redondeado fondo-superficie sombra">
+        <h2 class="color-texto-primario-oscuro">Carlos Andrade Mora</h2>
+        <dl class="datos">
+        <dt>Cédula</dt>
+        <dd>1712345678</dd>
+        <dt>Celular</dt>
+        <dd>0991234567</dd>
+        <dt>Correo</dt>
+        <dd>carlos.andrade@correo.ec</dd>
+        <dt>Dirección</dt>
+        <dd>Av. 10 de Agosto N24-15</dd>
+        </dl>
+      </article>
+    </section>
+    <section>
+      <h2>Mascotas del propietario</h2>
+      <table class="tabla">
+        <caption>Mascotas de Carlos Andrade Mora</caption>
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Especie</th>
+            <th scope="col">Raza</th>
+            <th scope="col">Peso (kg)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Toby</th>
+            <td>Perro</td>
+            <td>Labrador</td>
+            <td>28.5</td>
+          </tr>
+          <tr>
+            <th scope="row">Mishi</th>
+            <td>Gato</td>
+            <td>Mestizo</td>
+            <td>4.2</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="flex flex-envolver gap-m mt-m">
+        <a class="boton" href="propietarios-editar.html">Editar</a>
+        <a class="boton boton-secundario" href="propietarios-listado.html">Volver</a>
+      </div>
+    </section>
+  </main>
+  <footer class="p-m texto-centrado color-texto-blanco fondo-primario-oscuro">
+    <p>VetCare · Clínica veterinaria “Huellitas” · Quito, 2026</p>
+  </footer>
+</body>
+</html>
