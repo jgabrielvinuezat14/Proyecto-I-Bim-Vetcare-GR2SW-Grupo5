@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios | VetCare</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+  <header class="flex flex-envolver items-centro justify-espaciado gap-m py-m px-l fondo-primario movil-columna movil-items-inicio">
+    <a class="texto-xl texto-negrita color-texto-blanco sin-subrayado" href="admin-inicio.html">VetCare <span class="bloque texto-sm texto-normal">Clínica Huellitas</span></a>
+    <nav aria-label="Menú del administrador">
+      <ul class="flex flex-envolver gap-s lista-sin-estilo">
+        <li><a class="menu-enlace" href="admin-inicio.html">Inicio</a></li>
+        <li><a class="menu-enlace" href="veterinarios-listado.html">Veterinarios</a></li>
+        <li><a class="menu-enlace" href="servicios-listado.html" aria-current="page">Servicios</a></li>
+        <li><a class="menu-enlace borde-blanco" href="../index.html">Cerrar sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="contenido">
+    <section>
+      <div class="flex flex-envolver items-centro justify-espaciado gap-m mb-m">
+        <h1 class="m-0">Catálogo de servicios</h1>
+        <a class="boton" href="servicios-nuevo.html">Nuevo servicio</a>
+      </div>
+      <form action="servicios-listado.html" method="get" class="flex flex-envolver items-centro gap-s mb-m movil-columna movil-estirar" role="search">
+        <label for="buscar">Buscar servicio</label>
+        <input type="search" class="flex-crecer" id="buscar" name="q" maxlength="60" placeholder="Nombre del servicio">
+        <button type="submit" class="boton boton-secundario">Buscar</button>
+      </form>
+      <table class="tabla">
+        <caption>Servicios de la clínica</caption>
+        <thead>
+          <tr>
+            <th scope="col">Servicio</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Duración</th>
+            <th scope="col">Disponible</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Consulta general</th>
+            <td>$25.00</td>
+            <td>30 min</td>
+            <td><span class="estado fondo-acento">Sí</span></td>
+            <td><a class="enlace" href="servicios-detalle.html">Ver</a> <a class="enlace" href="servicios-editar.html">Editar</a> <a class="enlace enlace-peligro" href="servicios-eliminar.html">Eliminar</a></td>
+          </tr>
+          <tr>
+            <th scope="row">Vacunación</th>
+            <td>$18.00</td>
+            <td>30 min</td>
+            <td><span class="estado fondo-acento">Sí</span></td>
+            <td><a class="enlace" href="servicios-detalle.html">Ver</a> <a class="enlace" href="servicios-editar.html">Editar</a> <a class="enlace enlace-peligro" href="servicios-eliminar.html">Eliminar</a></td>
+          </tr>
+          <tr>
+            <th scope="row">Desparasitación</th>
+            <td>$12.00</td>
+            <td>30 min</td>
+            <td><span class="estado fondo-acento">Sí</span></td>
+            <td><a class="enlace" href="servicios-detalle.html">Ver</a> <a class="enlace" href="servicios-editar.html">Editar</a> <a class="enlace enlace-peligro" href="servicios-eliminar.html">Eliminar</a></td>
+          </tr>
+          <tr>
+            <th scope="row">Baño y peluquería</th>
+            <td>$20.00</td>
+            <td>60 min</td>
+            <td><span class="estado fondo-acento">Sí</span></td>
+            <td><a class="enlace" href="servicios-detalle.html">Ver</a> <a class="enlace" href="servicios-editar.html">Editar</a> <a class="enlace enlace-peligro" href="servicios-eliminar.html">Eliminar</a></td>
+          </tr>
+          <tr>
+            <th scope="row">Ecografía</th>
+            <td>$45.00</td>
+            <td>30 min</td>
+            <td><span class="estado fondo-acento">Sí</span></td>
+            <td><a class="enlace" href="servicios-detalle.html">Ver</a> <a class="enlace" href="servicios-editar.html">Editar</a> <a class="enlace enlace-peligro" href="servicios-eliminar.html">Eliminar</a></td>
+          </tr>
+          <tr>
+            <th scope="row">Cirugía menor</th>
+            <td>$120.00</td>
+            <td>90 min</td>
+            <td><span class="estado fondo-acento">Sí</span></td>
+            <td><a class="enlace" href="servicios-detalle.html">Ver</a> <a class="enlace" href="servicios-editar.html">Editar</a> <a class="enlace enlace-peligro" href="servicios-eliminar.html">Eliminar</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <footer class="p-m texto-centrado color-texto-blanco fondo-primario-oscuro">
+    <p>VetCare · Clínica veterinaria “Huellitas” · Quito, 2026</p>
+  </footer>
+</body>
+</html>
