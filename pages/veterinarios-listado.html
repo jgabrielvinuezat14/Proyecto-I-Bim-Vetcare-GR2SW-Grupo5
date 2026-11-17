@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veterinarios | VetCare</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+  <header class="flex flex-envolver items-centro justify-espaciado gap-m py-m px-l fondo-primario movil-columna movil-items-inicio">
+    <a class="texto-xl texto-negrita color-texto-blanco sin-subrayado" href="admin-inicio.html">VetCare <span class="bloque texto-sm texto-normal">Clínica Huellitas</span></a>
+    <nav aria-label="Menú del administrador">
+      <ul class="flex flex-envolver gap-s lista-sin-estilo">
+        <li><a class="menu-enlace" href="admin-inicio.html">Inicio</a></li>
+        <li><a class="menu-enlace" href="veterinarios-listado.html" aria-current="page">Veterinarios</a></li>
+        <li><a class="menu-enlace" href="servicios-listado.html">Servicios</a></li>
+        <li><a class="menu-enlace borde-blanco" href="../index.html">Cerrar sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="contenido">
+    <section>
+      <div class="flex flex-envolver items-centro justify-espaciado gap-m mb-m">
+        <h1 class="m-0">Veterinarios</h1>
+        <a class="boton" href="veterinarios-nuevo.html">Nuevo veterinario</a>
+      </div>
+      <form action="veterinarios-listado.html" method="get" class="flex flex-envolver items-centro gap-s mb-m movil-columna movil-estirar" role="search">
+        <label for="buscar">Buscar veterinario</label>
+        <input type="search" class="flex-crecer" id="buscar" name="q" maxlength="50" placeholder="Apellido o especialidad">
+        <button type="submit" class="boton boton-secundario">Buscar</button>
+      </form>
+      <table class="tabla">
+        <caption>Veterinarios de la clínica</caption>
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Especialidad</th>
+            <th scope="col">Celular</th>
+            <th scope="col">Correo</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Dra. Sofía Benítez</th>
+            <td>Medicina general</td>
+            <td>0991112233</td>
+            <td>sbenitez@huellitas.ec</td>
+            <td><span class="estado fondo-acento">Activo</span></td>
+            <td><a class="enlace" href="veterinarios-detalle.html">Ver</a> <a class="enlace" href="veterinarios-editar.html">Editar</a> <a class="enlace enlace-peligro" href="veterinarios-eliminar.html">Eliminar</a></td>
+          </tr>
+          <tr>
+            <th scope="row">Dr. Andrés Ruiz</th>
+            <td>Cirugía</td>
+            <td>0992223344</td>
+            <td>aruiz@huellitas.ec</td>
+            <td><span class="estado fondo-acento">Activo</span></td>
+            <td><a class="enlace" href="veterinarios-detalle.html">Ver</a> <a class="enlace" href="veterinarios-editar.html">Editar</a> <a class="enlace enlace-peligro" href="veterinarios-eliminar.html">Eliminar</a></td>
+          </tr>
+          <tr>
+            <th scope="row">Dra. Paula Jaramillo</th>
+            <td>Dermatología y exóticos</td>
+            <td>0993334455</td>
+            <td>pjaramillo@huellitas.ec</td>
+            <td><span class="estado fondo-acento">Activo</span></td>
+            <td><a class="enlace" href="veterinarios-detalle.html">Ver</a> <a class="enlace" href="veterinarios-editar.html">Editar</a> <a class="enlace enlace-peligro" href="veterinarios-eliminar.html">Eliminar</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <footer class="p-m texto-centrado color-texto-blanco fondo-primario-oscuro">
+    <p>VetCare · Clínica veterinaria “Huellitas” · Quito, 2026</p>
+  </footer>
+</body>
+</html>

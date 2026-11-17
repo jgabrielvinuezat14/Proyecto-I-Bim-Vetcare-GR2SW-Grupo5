@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eliminar servicio | VetCare</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+  <header class="flex flex-envolver items-centro justify-espaciado gap-m py-m px-l fondo-primario movil-columna movil-items-inicio">
+    <a class="texto-xl texto-negrita color-texto-blanco sin-subrayado" href="admin-inicio.html">VetCare <span class="bloque texto-sm texto-normal">Clínica Huellitas</span></a>
+    <nav aria-label="Menú del administrador">
+      <ul class="flex flex-envolver gap-s lista-sin-estilo">
+        <li><a class="menu-enlace" href="admin-inicio.html">Inicio</a></li>
+        <li><a class="menu-enlace" href="veterinarios-listado.html">Veterinarios</a></li>
+        <li><a class="menu-enlace" href="servicios-listado.html">Servicios</a></li>
+        <li><a class="menu-enlace borde-blanco" href="../index.html">Cerrar sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="contenido">
+    <section>
+      <h1>Eliminar servicio</h1>
+      <article class="p-l redondeado fondo-superficie sombra borde-izq-peligro">
+        <h2 class="color-texto-primario-oscuro">¿Desea eliminar «Ecografía»?</h2>
+        <dl class="datos">
+        <dt>Precio</dt>
+        <dd>$45.00</dd>
+        <dt>Duración</dt>
+        <dd>30 minutos</dd>
+        <dt>Citas programadas</dt>
+        <dd>Ninguna</dd>
+        </dl>
+        <p>Si el servicio está en citas programadas, desmarque «Disponible» en lugar de eliminarlo.</p>
+      </article>
+      <form action="servicios-listado.html" method="get" class="flex flex-envolver gap-m mt-m">
+        <button type="submit" class="boton boton-peligro">Confirmar</button>
+        <a class="boton boton-secundario" href="servicios-listado.html">Cancelar</a>
+      </form>
+    </section>
+  </main>
+  <footer class="p-m texto-centrado color-texto-blanco fondo-primario-oscuro">
+    <p>VetCare · Clínica veterinaria “Huellitas” · Quito, 2026</p>
+  </footer>
+</body>
+</html>

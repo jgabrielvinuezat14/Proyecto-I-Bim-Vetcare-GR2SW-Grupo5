@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar veterinario | VetCare</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+  <header class="flex flex-envolver items-centro justify-espaciado gap-m py-m px-l fondo-primario movil-columna movil-items-inicio">
+    <a class="texto-xl texto-negrita color-texto-blanco sin-subrayado" href="admin-inicio.html">VetCare <span class="bloque texto-sm texto-normal">Clínica Huellitas</span></a>
+    <nav aria-label="Menú del administrador">
+      <ul class="flex flex-envolver gap-s lista-sin-estilo">
+        <li><a class="menu-enlace" href="admin-inicio.html">Inicio</a></li>
+        <li><a class="menu-enlace" href="veterinarios-listado.html">Veterinarios</a></li>
+        <li><a class="menu-enlace" href="servicios-listado.html">Servicios</a></li>
+        <li><a class="menu-enlace borde-blanco" href="../index.html">Cerrar sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="contenido">
+    <section>
+      <h1>Editar veterinario</h1>
+      <p>La cédula no se puede modificar.</p>
+      <form action="veterinarios-listado.html" method="get" class="grid gap-l">
+        <fieldset>
+          <legend>Datos personales</legend>
+          <div class="flex flex-columna gap-xs">
+            <label for="cedula">Cédula</label>
+            <input type="text" id="cedula" name="cedula" inputmode="numeric" required pattern="[0-9]{10}" maxlength="10" title="Exactamente 10 dígitos numéricos" placeholder="1711122233" autocomplete="off" value="1711122233" readonly>
+          </div>
+          <div class="flex flex-columna gap-xs">
+            <label for="nombres">Nombres</label>
+            <input type="text" id="nombres" name="nombres" required pattern="[A-Za-zÁÉÍÓÚáéíóúÑñÜü ]{2,50}" minlength="2" maxlength="50" title="Solo letras y espacios, de 2 a 50 caracteres" placeholder="Sofía" autocomplete="given-name" value="Sofía">
+          </div>
+          <div class="flex flex-columna gap-xs">
+            <label for="apellidos">Apellidos</label>
+            <input type="text" id="apellidos" name="apellidos" required pattern="[A-Za-zÁÉÍÓÚáéíóúÑñÜü ]{2,50}" minlength="2" maxlength="50" title="Solo letras y espacios, de 2 a 50 caracteres" placeholder="Benítez" autocomplete="family-name" value="Benítez">
+          </div>
+          <div class="flex flex-columna gap-xs">
+            <label for="especialidad">Especialidad</label>
+            <input type="text" id="especialidad" name="especialidad" list="especialidades" required maxlength="50" placeholder="Medicina general" value="Medicina general">
+            <datalist id="especialidades">
+              <option value="Medicina general"></option>
+              <option value="Cirugía"></option>
+              <option value="Dermatología"></option>
+              <option value="Exóticos"></option>
+            </datalist>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Contacto y cuenta</legend>
+          <div class="flex flex-columna gap-xs">
+            <label for="celular">Celular</label>
+            <input type="tel" id="celular" name="celular" required pattern="09[0-9]{8}" title="10 dígitos que empiezan con 09" placeholder="0991112233" autocomplete="tel" value="0991112233">
+          </div>
+          <div class="flex flex-columna gap-xs">
+            <label for="correo">Correo institucional</label>
+            <input type="email" id="correo" name="correo" required pattern=".+@huellitas\.ec" title="Correo con dominio @huellitas.ec" placeholder="sbenitez@huellitas.ec" autocomplete="email" value="sbenitez@huellitas.ec">
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Horario de atención</legend>
+          <fieldset class="flex flex-envolver items-centro gap-s p-m">
+            <legend>Días de atención (al menos uno)</legend>
+            <input type="checkbox" id="dia-lunes" name="dias" value="Lunes" checked>
+            <label for="dia-lunes">Lunes</label>
+            <input type="checkbox" id="dia-martes" name="dias" value="Martes" checked>
+            <label for="dia-martes">Martes</label>
+            <input type="checkbox" id="dia-miercoles" name="dias" value="Miércoles" checked>
+            <label for="dia-miercoles">Miércoles</label>
+            <input type="checkbox" id="dia-jueves" name="dias" value="Jueves" checked>
+            <label for="dia-jueves">Jueves</label>
+            <input type="checkbox" id="dia-viernes" name="dias" value="Viernes" checked>
+            <label for="dia-viernes">Viernes</label>
+            <input type="checkbox" id="dia-sabado" name="dias" value="Sábado">
+            <label for="dia-sabado">Sábado</label>
+          </fieldset>
+          <div class="flex flex-columna gap-xs">
+            <label for="inicio">Hora de inicio</label>
+            <input type="time" id="inicio" name="inicio" required min="08:00" max="18:00" step="1800" value="08:00">
+          </div>
+          <div class="flex flex-columna gap-xs">
+            <label for="fin">Hora de fin</label>
+            <input type="time" id="fin" name="fin" required min="08:00" max="18:00" step="1800" value="17:00">
+          </div>
+          <fieldset class="flex flex-envolver items-centro gap-s p-m">
+            <legend>Estado</legend>
+            <input type="radio" id="activo" name="estado" value="Activo" required checked>
+            <label for="activo">Activo</label>
+            <input type="radio" id="inactivo" name="estado" value="Inactivo">
+            <label for="inactivo">Inactivo</label>
+          </fieldset>
+        </fieldset>
+        <div class="flex flex-envolver gap-m mt-m">
+          <button type="submit" class="boton">Guardar cambios</button>
+          <a class="boton boton-secundario" href="veterinarios-listado.html">Cancelar</a>
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer class="p-m texto-centrado color-texto-blanco fondo-primario-oscuro">
+    <p>VetCare · Clínica veterinaria “Huellitas” · Quito, 2026</p>
+  </footer>
+</body>
+</html>
