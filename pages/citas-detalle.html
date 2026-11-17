@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de la cita | VetCare</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+
+<body>
+    <header
+        class="flex flex-envolver items-centro justify-espaciado gap-m py-m px-l fondo-primario movil-columna movil-items-inicio">
+        <a class="texto-xl texto-negrita color-texto-blanco sin-subrayado" href="recepcion-inicio.html">VetCare <span
+                class="bloque texto-sm texto-normal">Clínica Huellitas</span></a>
+        <nav aria-label="Menú de recepción">
+            <ul class="flex flex-envolver gap-s lista-sin-estilo">
+                <li><a class="menu-enlace" href="recepcion-inicio.html">Inicio</a></li>
+                <li><a class="menu-enlace" href="propietarios-listado.html">Propietarios</a></li>
+                <li><a class="menu-enlace" href="mascotas-listado.html">Mascotas</a></li>
+                <li><a class="menu-enlace" href="citas-nueva.html">Agendar cita</a></li>
+                <li><a class="menu-enlace" href="citas-listado.html">Citas</a></li>
+                <li><a class="menu-enlace borde-blanco" href="../index.html">Cerrar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="contenido">
+        <section>
+            <h1>Detalle de la cita</h1>
+            <article class="p-l redondeado fondo-superficie sombra">
+                <h2 class="color-texto-primario-oscuro">Toby · 2026-11-18 · 09:00</h2>
+                <dl class="datos">
+                    <dt>Propietario</dt>
+                    <dd>Carlos Andrade Mora (0991234567)</dd>
+                    <dt>Servicio</dt>
+                    <dd>Consulta general — $25.00</dd>
+                    <dt>Veterinario</dt>
+                    <dd>Dra. Sofía Benítez</dd>
+                    <dt>Motivo</dt>
+                    <dd>Revisión de oído derecho</dd>
+                    <dt>Estado</dt>
+                    <dd><span class="estado fondo-primario">Programada</span></dd>
+                </dl>
+            </article>
+            <div class="flex flex-envolver gap-m mt-m">
+                <a class="boton" href="citas-reprogramar.html">Reprogramar</a>
+                <a class="boton boton-peligro" href="citas-cancelar.html">Cancelar cita</a>
+                <a class="boton boton-secundario" href="citas-listado.html">Volver</a>
+            </div>
+        </section>
+    </main>
+    <footer class="p-m texto-centrado color-texto-blanco fondo-primario-oscuro">
+        <p>VetCare · Clínica veterinaria “Huellitas” · Quito, 2026</p>
+    </footer>
+</body>
+
+</html>
