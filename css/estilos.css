@@ -375,3 +375,16 @@ textarea:user-invalid {
 }
 
 /* ---------- 14. Diseño adaptable: escritorio (desde 64rem) ---------- */
+
+@media (min-width: 64rem) {
+  :root {
+    --texto-titulo: 2rem;
+  }
+
+  .contenido {
+    padding: var(--espacio-xl);
+  }
+
+  .escritorio-grid-2-1 { grid-template-columns: 2fr 1fr; }
+  .escritorio-grid-3-1 { grid-template-columns: 3fr 1fr; }
+}
