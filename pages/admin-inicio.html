@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel del administrador - VetCare</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+  <header class="flex flex-envolver items-centro justify-espaciado gap-m py-m px-l fondo-primario movil-columna movil-items-inicio">
+    <a class="texto-xl texto-negrita color-texto-blanco sin-subrayado" href="admin-inicio.html">VetCare <span class="bloque texto-sm texto-normal">Clínica Huellitas</span></a>
+    <nav aria-label="Menú del administrador">
+      <ul class="flex flex-envolver gap-s lista-sin-estilo">
+        <li><a class="menu-enlace" href="admin-inicio.html" aria-current="page">Inicio</a></li>
+        <li><a class="menu-enlace" href="veterinarios-listado.html">Veterinarios</a></li>
+        <li><a class="menu-enlace" href="servicios-listado.html">Servicios</a></li>
+        <li><a class="menu-enlace borde-blanco" href="../index.html">Cerrar sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="contenido">
+    <section>
+      <h1>Panel del administrador</h1>
+      <p>Administre el personal veterinario y el catálogo de servicios.</p>
+    </section>
+    <section class="grid grid-auto-14 gap-l" aria-label="Opciones">
+      <article class="tarjeta">
+        <h2>Veterinarios</h2>
+        <p>Registre veterinarios y su horario de atención.</p>
+        <a class="boton" href="veterinarios-listado.html">Veterinarios</a>
+      </article>
+      <article class="tarjeta">
+        <h2>Servicios</h2>
+        <p>Mantenga el catálogo de servicios y sus precios.</p>
+        <a class="boton" href="servicios-listado.html">Servicios</a>
+      </article>
+    </section>
+  </main>
+  <footer class="p-m texto-centrado color-texto-blanco fondo-primario-oscuro">
+    <p>VetCare · Clínica veterinaria “Huellitas” · Quito, 2026</p>
+  </footer>
+</body>
+</html>
