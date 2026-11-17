@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial clínico | VetCare</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+<header class="flex flex-envolver items-centro justify-espaciado gap-m py-m px-l fondo-primario movil-columna movil-items-inicio">
+    <a class="texto-xl texto-negrita color-texto-blanco sin-subrayado" href="veterinario-inicio.html">VetCare <span class="bloque texto-sm texto-normal">Clínica Huellitas</span></a>
+    <nav aria-label="Menú del veterinario">
+        <ul class="flex flex-envolver gap-s lista-sin-estilo">
+            <li><a class="menu-enlace" href="veterinario-inicio.html">Inicio</a></li>
+            <li><a class="menu-enlace" href="agenda-dia.html">Mi agenda</a></li>
+            <li><a class="menu-enlace" href="historial-clinico.html" aria-current="page">Historial clínico</a></li>
+            <li><a class="menu-enlace borde-blanco" href="../index.html">Cerrar sesión</a></li>
+        </ul>
+    </nav>
+</header>
+<main class="contenido">
+    <section>
+        <h1>Historial clínico</h1>
+        <form action="historial-clinico.html" method="get" class="flex flex-envolver items-centro gap-s mb-m movil-columna movil-estirar" role="search">
+            <label for="buscar">Buscar mascota</label>
+            <input type="search" class="flex-crecer" id="buscar" name="q" list="lista-mascotas" required minlength="2" maxlength="40" placeholder="Nombre o cédula del propietario">
+            <datalist id="lista-mascotas">
+                <option value="Toby — Carlos Andrade Mora"></option>
+                <option value="Mishi — Carlos Andrade Mora"></option>
+                <option value="Luna — María Fernanda López"></option>
+                <option value="Kiwi — Jorge Paredes Villacís"></option>
+                <option value="Copito — Ana Lucía Cevallos"></option>
+            </datalist>
+            <label for="desde">Desde</label>
+            <input type="date" id="desde" name="desde" max="2026-11-18">
+            <button type="submit" class="boton boton-secundario">Buscar</button>
+        </form>
+    </section>
+    <section>
+        <article class="p-l redondeado fondo-superficie sombra">
+            <h2 class="color-texto-primario-oscuro">Toby</h2>
+            <dl class="datos">
+                <dt>Especie</dt>
+                <dd>Perro (Labrador)</dd>
+                <dt>Propietario</dt>
+                <dd>Carlos Andrade Mora</dd>
+                <dt>Peso actual</dt>
+                <dd>28.0 kg</dd>
+            </dl>
+        </article>
+        <table class="tabla">
+            <caption>Atenciones de Toby, de la más reciente a la más antigua</caption>
+            <thead>
+            <tr>
+                <th scope="col">Fecha</th>
+                <th scope="col">Servicio</th>
+                <th scope="col">Veterinario</th>
+                <th scope="col">Diagnóstico</th>
+                <th scope="col">Peso (kg)</th>
+                <th scope="col">Acciones</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">2026-09-02</th>
+                <td>Vacunación</td>
+                <td>Dra. Sofía Benítez</td>
+                <td>Paciente sano; refuerzo de vacuna antirrábica</td>
+                <td>28.0</td>
+                <td><a class="enlace" href="atencion-detalle.html">Ver</a></td>
+            </tr>
+            <tr>
+                <th scope="row">2026-05-14</th>
+                <td>Consulta general</td>
+                <td>Dra. Sofía Benítez</td>
+                <td>Otitis externa leve en oído derecho</td>
+                <td>27.6</td>
+                <td><a class="enlace" href="atencion-detalle.html">Ver</a></td>
+            </tr>
+            <tr>
+                <th scope="row">2025-12-03</th>
+                <td>Desparasitación</td>
+                <td>Dr. Andrés Ruiz</td>
+                <td>Control antiparasitario sin hallazgos</td>
+                <td>27.1</td>
+                <td><a class="enlace" href="atencion-detalle.html">Ver</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
+<footer class="p-m texto-centrado color-texto-blanco fondo-primario-oscuro">
+    <p>VetCare · Clínica veterinaria “Huellitas” · Quito, 2026</p>
+</footer>
+</body>
+</html>
