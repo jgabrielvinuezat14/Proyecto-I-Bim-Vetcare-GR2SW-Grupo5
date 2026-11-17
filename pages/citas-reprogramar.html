@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reprogramar cita | VetCare</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+
+<body>
+    <header
+        class="flex flex-envolver items-centro justify-espaciado gap-m py-m px-l fondo-primario movil-columna movil-items-inicio">
+        <a class="texto-xl texto-negrita color-texto-blanco sin-subrayado" href="recepcion-inicio.html">VetCare <span
+                class="bloque texto-sm texto-normal">Clínica Huellitas</span></a>
+        <nav aria-label="Menú de recepción">
+            <ul class="flex flex-envolver gap-s lista-sin-estilo">
+                <li><a class="menu-enlace" href="recepcion-inicio.html">Inicio</a></li>
+                <li><a class="menu-enlace" href="propietarios-listado.html">Propietarios</a></li>
+                <li><a class="menu-enlace" href="mascotas-listado.html">Mascotas</a></li>
+                <li><a class="menu-enlace" href="citas-nueva.html">Agendar cita</a></li>
+                <li><a class="menu-enlace" href="citas-listado.html">Citas</a></li>
+                <li><a class="menu-enlace borde-blanco" href="../index.html">Cerrar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="contenido">
+        <section>
+            <h1>Reprogramar cita</h1>
+            <form action="citas-listado.html" method="get" class="grid gap-l">
+                <fieldset>
+                    <legend>Cita actual</legend>
+                    <div class="flex flex-columna gap-xs">
+                        <label for="mascota">Mascota</label>
+                        <input type="text" id="mascota" name="mascota" value="Toby — Carlos Andrade Mora" readonly>
+                    </div>
+                    <div class="flex flex-columna gap-xs">
+                        <label for="servicio">Servicio</label>
+                        <input type="text" id="servicio" name="servicio" value="Consulta general" readonly>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Nueva fecha y hora</legend>
+                    <div class="flex flex-columna gap-xs">
+                        <label for="fecha">Nueva fecha</label>
+                        <input type="date" id="fecha" name="fecha" required min="2026-11-18" value="2026-11-18"
+                            title="De lunes a sábado; no fechas pasadas">
+                    </div>
+                    <div class="flex flex-columna gap-xs">
+                        <label for="hora">Nueva hora</label>
+                        <input type="time" id="hora" name="hora" required min="08:00" max="17:30" step="1800"
+                            value="09:00" title="Bloques de 30 minutos entre 08:00 y 17:30">
+                    </div>
+                    <div class="flex flex-columna gap-xs">
+                        <label for="veterinario">Veterinario</label>
+                        <select id="veterinario" name="veterinario" required>
+                            <option value="">Seleccione el veterinario</option>
+                            <option value="1711122233" selected>Dra. Sofía Benítez — Medicina general</option>
+                            <option value="1722233344">Dr. Andrés Ruiz — Cirugía</option>
+                            <option value="1733344455">Dra. Paula Jaramillo — Dermatología y exóticos</option>
+                        </select>
+                    </div>
+                    <div class="flex flex-columna gap-xs col-completa">
+                        <label for="motivo">Motivo de reprogramación</label>
+                        <textarea id="motivo" name="motivo" rows="2" maxlength="200" placeholder="Opcional"></textarea>
+                    </div>
+                </fieldset>
+                <div class="flex flex-envolver gap-m mt-m">
+                    <button type="submit" class="boton">Guardar cambios</button>
+                    <a class="boton boton-secundario" href="citas-listado.html">Cancelar</a>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer class="p-m texto-centrado color-texto-blanco fondo-primario-oscuro">
+        <p>VetCare · Clínica veterinaria “Huellitas” · Quito, 2026</p>
+    </footer>
+</body>
+
+</html>
