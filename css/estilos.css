@@ -60,13 +60,71 @@ body {
   background-color: var(--color-fondo);
 }
 
-h1 {
+h1{
   margin: 0 0 var(--espacio-m);
   font-size: var(--texto-titulo);
   color: var(--color-primario-oscuro);
 }
 
-h2 {
+h2{
   margin: 0 0 var(--espacio-s);
   font-size: var(--texto-lg);
 }
+
+/* ---------- 3. Utilidades: tipografía ---------- */
+.texto-sm{font-size: var(--texto-sm);}
+.texto-xl{font-size: var(--texto-xl);}
+.texto-normal{font-weight: 400;}
+.texto-negrita{font-weight: 700;}
+.texto-mono{font-family: var(--fuente-mono);}
+.texto-centrado{text-align: center;}
+.sin-subrayado{text-decoration: none;}
+
+/* ---------- 4. Utilidades: colores de texto y fondo ---------- */
+.color-texto-blanco{color: var(--color-superficie);}
+.color-texto-primario-oscuro{color: var(--color-primario-oscuro);}
+.fondo-primario{background-color: var(--color-primario);}
+.fondo-primario-oscuro{background-color: var(--color-primario-oscuro);}
+.fondo-acento{background-color: var(--color-acento);}
+.fondo-peligro{background-color: var(--color-peligro);}
+.fondo-superficie{background-color: var(--color-superficie);}
+
+/* ---------- 5. Utilidades: maquetación (Flexbox y Grid) ---------- */
+.bloque{display: block;}
+.flex{display: flex;}
+.flex-columna{flex-direction: column;}
+.flex-envolver{flex-wrap: wrap;}
+.flex-crecer{flex: 1 1 14rem; min-width: 0;}
+.items-centro{align-items: center;}
+.items-inicio{align-items: start;}
+.items-fin{align-items: end;}
+.justify-espaciado{justify-content: space-between;}
+.alinear-inicio{align-self: start;}
+.grid{display: grid;}
+.grid-auto-10{grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));}
+.grid-auto-14{grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));}
+.col-completa{grid-column: 1 / -1;}
+.ancho-total{width: 100%;}
+
+/* ---------- 6. Utilidades: márgenes, rellenos y separación ---------- */
+.m-0{margin: 0;}
+.mt-m{margin-top: var(--espacio-m);}
+.mb-m{margin-bottom: var(--espacio-m);}
+.p-m{padding: var(--espacio-m);}
+.p-l{padding: var(--espacio-l);}
+.p-xl{padding: var(--espacio-xl);}
+.py-m{padding-top: var(--espacio-m); padding-bottom: var(--espacio-m);}
+.px-l{padding-left: var(--espacio-l); padding-right: var(--espacio-l);}
+.pl-l{padding-left: var(--espacio-l);}
+.gap-xs{ gap: var(--espacio-xs);}
+.gap-s{ gap: var(--espacio-s);}
+.gap-m{ gap: var(--espacio-m);}
+.gap-l{ gap: var(--espacio-l);}
+
+/* ---------- 7. Utilidades: bordes, sombras y listas ---------- */
+.redondeado{border-radius: var(--radio);}
+.sombra{box-shadow: var(--sombra);}
+.borde-blanco{border: 1px solid var(--color-superficie);}
+.borde-izq-acento{border-left: 6px solid var(--color-acento);}
+.borde-izq-peligro{border-left: 6px solid var(--color-peligro);}
+.lista-sin-estilo{list-style: none; margin: 0; padding: 0;}
