@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citas | VetCare</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+
+<body>
+    <header
+        class="flex flex-envolver items-centro justify-espaciado gap-m py-m px-l fondo-primario movil-columna movil-items-inicio">
+        <a class="texto-xl texto-negrita color-texto-blanco sin-subrayado" href="recepcion-inicio.html">VetCare <span
+                class="bloque texto-sm texto-normal">Clínica Huellitas</span></a>
+        <nav aria-label="Menú de recepción">
+            <ul class="flex flex-envolver gap-s lista-sin-estilo">
+                <li><a class="menu-enlace" href="recepcion-inicio.html">Inicio</a></li>
+                <li><a class="menu-enlace" href="propietarios-listado.html">Propietarios</a></li>
+                <li><a class="menu-enlace" href="mascotas-listado.html">Mascotas</a></li>
+                <li><a class="menu-enlace" href="citas-nueva.html">Agendar cita</a></li>
+                <li><a class="menu-enlace" href="citas-listado.html" aria-current="page">Citas</a></li>
+                <li><a class="menu-enlace borde-blanco" href="../index.html">Cerrar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="contenido">
+        <section>
+            <div class="flex flex-envolver items-centro justify-espaciado gap-m mb-m">
+                <h1 class="m-0">Citas</h1>
+                <a class="boton" href="citas-nueva.html">Nueva cita</a>
+            </div>
+            <form action="citas-listado.html" method="get" class="grid grid-auto-10 items-fin gap-s mb-m" role="search">
+                <label for="buscar">Mascota o propietario</label>
+                <input type="search" id="buscar" name="q" maxlength="40" placeholder="Mascota o cédula del propietario">
+                <label for="fecha">Fecha</label>
+                <input type="date" id="fecha" name="fecha">
+                <label for="estado">Estado</label>
+                <select id="estado" name="estado">
+                    <option value="">Todos</option>
+                    <option value="Programada">Programada</option>
+                    <option value="Atendida">Atendida</option>
+                    <option value="Cancelada">Cancelada</option>
+                </select>
+                <button type="submit" class="boton boton-secundario">Filtrar</button>
+            </form>
+            <table class="tabla">
+                <caption>Citas registradas</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Hora</th>
+                        <th scope="col">Mascota</th>
+                        <th scope="col">Propietario</th>
+                        <th scope="col">Servicio</th>
+                        <th scope="col">Veterinario</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">2026-11-18</th>
+                        <td>09:00</td>
+                        <td>Toby</td>
+                        <td>Carlos Andrade Mora</td>
+                        <td>Consulta general</td>
+                        <td>Dra. Sofía Benítez</td>
+                        <td><span class="estado fondo-primario">Programada</span></td>
+                        <td><a class="enlace" href="citas-detalle.html">Ver</a> <a class="enlace"
+                                href="citas-reprogramar.html">Reprogramar</a> <a class="enlace enlace-peligro"
+                                href="citas-cancelar.html">Cancelar cita</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2026-11-18</th>
+                        <td>10:30</td>
+                        <td>Luna</td>
+                        <td>María Fernanda López</td>
+                        <td>Vacunación</td>
+                        <td>Dra. Sofía Benítez</td>
+                        <td><span class="estado fondo-primario">Programada</span></td>
+                        <td><a class="enlace" href="citas-detalle.html">Ver</a> <a class="enlace"
+                                href="citas-reprogramar.html">Reprogramar</a> <a class="enlace enlace-peligro"
+                                href="citas-cancelar.html">Cancelar cita</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2026-11-18</th>
+                        <td>11:00</td>
+                        <td>Kiwi</td>
+                        <td>Jorge Paredes Villacís</td>
+                        <td>Consulta general</td>
+                        <td>Dra. Paula Jaramillo</td>
+                        <td><span class="estado fondo-primario">Programada</span></td>
+                        <td><a class="enlace" href="citas-detalle.html">Ver</a> <a class="enlace"
+                                href="citas-reprogramar.html">Reprogramar</a> <a class="enlace enlace-peligro"
+                                href="citas-cancelar.html">Cancelar cita</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2026-11-19</th>
+                        <td>15:30</td>
+                        <td>Mishi</td>
+                        <td>Carlos Andrade Mora</td>
+                        <td>Desparasitación</td>
+                        <td>Dr. Andrés Ruiz</td>
+                        <td><span class="estado fondo-primario">Programada</span></td>
+                        <td><a class="enlace" href="citas-detalle.html">Ver</a> <a class="enlace"
+                                href="citas-reprogramar.html">Reprogramar</a> <a class="enlace enlace-peligro"
+                                href="citas-cancelar.html">Cancelar cita</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2026-11-14</th>
+                        <td>08:30</td>
+                        <td>Copito</td>
+                        <td>Ana Lucía Cevallos</td>
+                        <td>Consulta general</td>
+                        <td>Dra. Paula Jaramillo</td>
+                        <td><span class="estado fondo-acento">Atendida</span></td>
+                        <td><a class="enlace" href="citas-detalle.html">Ver</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2026-11-13</th>
+                        <td>16:00</td>
+                        <td>Toby</td>
+                        <td>Carlos Andrade Mora</td>
+                        <td>Baño y peluquería</td>
+                        <td>Dr. Andrés Ruiz</td>
+                        <td><span class="estado fondo-peligro">Cancelada</span></td>
+                        <td><a class="enlace" href="citas-detalle.html">Ver</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer class="p-m texto-centrado color-texto-blanco fondo-primario-oscuro">
+        <p>VetCare · Clínica veterinaria “Huellitas” · Quito, 2026</p>
+    </footer>
+</body>
+
+</html>
+```
