@@ -1,0 +1,171 @@
+/* ---------- 1. Fuente web y variables ---------- */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+
+:root {
+  /* Colores (contraste AA sobre fondo claro) */
+  --color-primario: hsl(196, 78%, 27%);
+  --color-primario-oscuro: hsl(196, 79%, 19%);
+  --color-acento: hsl(150, 59%, 30%);
+  --color-peligro: hsl(4, 76%, 40%);
+  --color-peligro-oscuro: hsl(4, 77%, 32%);
+  --color-texto: hsl(213, 28%, 16%);
+  --color-texto-suave: hsl(212, 17%, 35%);
+  --color-fondo: hsl(210, 37%, 97%);
+  --color-superficie: hsl(0, 0%, 100%);
+  --color-borde: hsl(210, 23%, 83%);
+  --color-fila-par: hsl(204, 42%, 95%);
+  --color-fila-hover: hsl(201, 49%, 91%);
+  --color-foco: hsl(42, 100%, 47%);
+  --color-fondo-invalido: hsl(5, 76%, 97%);
+
+  /* Tipografía */
+  --fuente-base: "Nunito", "Segoe UI", Arial, sans-serif;
+  --fuente-mono: "Courier New", monospace;
+  --texto-sm: 0.85rem;
+  --texto-md: 1rem;
+  --texto-lg: 1.25rem;
+  --texto-xl: 1.5rem;
+  --texto-titulo: 1.75rem;
+
+  /* Espaciados */
+  --espacio-xs: 0.25rem;
+  --espacio-s: 0.5rem;
+  --espacio-m: 1rem;
+  --espacio-l: 1.5rem;
+  --espacio-xl: 2.5rem;
+
+  /* Bordes, sombras y transiciones */
+  --radio: 0.5rem;
+  --radio-total: 1rem;
+  --sombra: 0 2px 8px hsla(196, 78%, 27%, 0.12);
+  --transicion: 0.2s ease-in-out;
+}
+
+/* ---------- 2. Base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--fuente-base);
+  font-size: var(--texto-md);
+  line-height: 1.5;
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+}
+
+h1{
+  margin: 0 0 var(--espacio-m);
+  font-size: var(--texto-titulo);
+  color: var(--color-primario-oscuro);
+}
+
+h2{
+  margin: 0 0 var(--espacio-s);
+  font-size: var(--texto-lg);
+}
+
+/* ---------- 3. Utilidades: tipografía ---------- */
+.texto-sm{font-size: var(--texto-sm);}
+.texto-xl{font-size: var(--texto-xl);}
+.texto-normal{font-weight: 400;}
+.texto-negrita{font-weight: 700;}
+.texto-mono{font-family: var(--fuente-mono);}
+.texto-centrado{text-align: center;}
+.sin-subrayado{text-decoration: none;}
+
+/* ---------- 4. Utilidades: colores de texto y fondo ---------- */
+.color-texto-blanco{color: var(--color-superficie);}
+.color-texto-primario-oscuro{color: var(--color-primario-oscuro);}
+.fondo-primario{background-color: var(--color-primario);}
+.fondo-primario-oscuro{background-color: var(--color-primario-oscuro);}
+.fondo-acento{background-color: var(--color-acento);}
+.fondo-peligro{background-color: var(--color-peligro);}
+.fondo-superficie{background-color: var(--color-superficie);}
+
+/* ---------- 5. Utilidades: maquetación (Flexbox y Grid) ---------- */
+.bloque{display: block;}
+.flex{display: flex;}
+.flex-columna{flex-direction: column;}
+.flex-envolver{flex-wrap: wrap;}
+.flex-crecer{flex: 1 1 14rem; min-width: 0;}
+.items-centro{align-items: center;}
+.items-inicio{align-items: start;}
+.items-fin{align-items: end;}
+.justify-espaciado{justify-content: space-between;}
+.alinear-inicio{align-self: start;}
+.grid{display: grid;}
+.grid-auto-10{grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));}
+.grid-auto-14{grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));}
+.col-completa{grid-column: 1 / -1;}
+.ancho-total{width: 100%;}
+
+/* ---------- 6. Utilidades: márgenes, rellenos y separación ---------- */
+.m-0{margin: 0;}
+.mt-m{margin-top: var(--espacio-m);}
+.mb-m{margin-bottom: var(--espacio-m);}
+.p-m{padding: var(--espacio-m);}
+.p-l{padding: var(--espacio-l);}
+.p-xl{padding: var(--espacio-xl);}
+.py-m{padding-top: var(--espacio-m); padding-bottom: var(--espacio-m);}
+.px-l{padding-left: var(--espacio-l); padding-right: var(--espacio-l);}
+.pl-l{padding-left: var(--espacio-l);}
+.gap-xs{ gap: var(--espacio-xs);}
+.gap-s{ gap: var(--espacio-s);}
+.gap-m{ gap: var(--espacio-m);}
+.gap-l{ gap: var(--espacio-l);}
+
+/* ---------- 7. Utilidades: bordes, sombras y listas ---------- */
+.redondeado{border-radius: var(--radio);}
+.sombra{box-shadow: var(--sombra);}
+.borde-blanco{border: 1px solid var(--color-superficie);}
+.borde-izq-acento{border-left: 6px solid var(--color-acento);}
+.borde-izq-peligro{border-left: 6px solid var(--color-peligro);}
+.lista-sin-estilo{list-style: none; margin: 0; padding: 0;}
+
+/* ---------- 8. Componentes: contenido y menú ---------- */
+.contenido{
+  flex: 1;
+  width: 100%;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: var(--espacio-l);
+  display: grid;
+  gap: var(--espacio-l);
+}
+
+.contenido > *{
+  min-width: 0;
+}
+
+.menu-enlace{
+  display: block;
+  padding: var(--espacio-s) var(--espacio-m);
+  border-radius: var(--radio);
+  color: var(--color-superficie);
+  text-decoration: none;
+  transition: background-color var(--transicion);
+}
+
+.menu-enlace:hover,
+.menu-enlace[aria-current="page"]{
+  background-color: var(--color-primario-oscuro);
+}
+
+/* ---------- 9. Componentes: botones y enlaces ---------- */
+
+/* ---------- 10. Componentes: tarjetas, fichas y estados ---------- */
+
+/* ---------- 11. Formularios y validación ---------- */
+
+/* ---------- 12. Tablas ---------- */
+
+/* ---------- 13. Diseño adaptable: móvil (hasta 48rem) ---------- */
+
+/* ---------- 14. Diseño adaptable: escritorio (desde 64rem) ---------- */
