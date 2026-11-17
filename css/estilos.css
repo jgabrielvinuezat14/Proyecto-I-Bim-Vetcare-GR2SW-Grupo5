@@ -128,3 +128,32 @@ h2{
 .borde-izq-acento{border-left: 6px solid var(--color-acento);}
 .borde-izq-peligro{border-left: 6px solid var(--color-peligro);}
 .lista-sin-estilo{list-style: none; margin: 0; padding: 0;}
+
+/* ---------- 8. Componentes: contenido y menú ---------- */
+.contenido{
+  flex: 1;
+  width: 100%;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: var(--espacio-l);
+  display: grid;
+  gap: var(--espacio-l);
+}
+
+.contenido > *{
+  min-width: 0;
+}
+
+.menu-enlace{
+  display: block;
+  padding: var(--espacio-s) var(--espacio-m);
+  border-radius: var(--radio);
+  color: var(--color-superficie);
+  text-decoration: none;
+  transition: background-color var(--transicion);
+}
+
+.menu-enlace:hover,
+.menu-enlace[aria-current="page"]{
+  background-color: var(--color-primario-oscuro);
+}
