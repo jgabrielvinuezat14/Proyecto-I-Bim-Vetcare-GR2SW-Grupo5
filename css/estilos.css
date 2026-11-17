@@ -159,6 +159,74 @@ h2{
 }
 
 /* ---------- 9. Componentes: botones y enlaces ---------- */
+.boton {
+  display: inline-block;
+  padding: var(--espacio-s) var(--espacio-l);
+  border: 2px solid var(--color-primario);
+  border-radius: var(--radio);
+  background-color: var(--color-primario);
+  color: var(--color-superficie);
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--transicion), transform var(--transicion);
+}
+
+.boton:hover {
+  background-color: var(--color-primario-oscuro);
+  border-color: var(--color-primario-oscuro);
+}
+
+.boton:active {
+  transform: scale(0.97);
+}
+
+.boton-secundario {
+  background-color: var(--color-superficie);
+  color: var(--color-primario);
+}
+
+.boton-secundario:hover {
+  color: var(--color-superficie);
+}
+
+.boton-peligro {
+  background-color: var(--color-peligro);
+  border-color: var(--color-peligro);
+}
+
+.boton-peligro:hover {
+  background-color: var(--color-peligro-oscuro);
+  border-color: var(--color-peligro-oscuro);
+}
+
+.enlace {
+  color: var(--color-primario);
+  font-weight: 600;
+  transition: color var(--transicion);
+}
+
+.enlace:hover {
+  color: var(--color-primario-oscuro);
+}
+
+.enlace:active {
+  color: var(--color-acento);
+}
+
+.enlace-peligro {
+  color: var(--color-peligro);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--color-foco);
+  outline-offset: 2px;
+}
 
 /* ---------- 10. Componentes: tarjetas, fichas y estados ---------- */
 
