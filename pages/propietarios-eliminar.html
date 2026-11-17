@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eliminar propietario | VetCare</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+  <header class="flex flex-envolver items-centro justify-espaciado gap-m py-m px-l fondo-primario movil-columna movil-items-inicio">
+    <a class="texto-xl texto-negrita color-texto-blanco sin-subrayado" href="recepcion-inicio.html">VetCare <span class="bloque texto-sm texto-normal">Clínica Huellitas</span></a>
+    <nav aria-label="Menú de recepción">
+      <ul class="flex flex-envolver gap-s lista-sin-estilo">
+        <li><a class="menu-enlace" href="recepcion-inicio.html">Inicio</a></li>
+        <li><a class="menu-enlace" href="propietarios-listado.html">Propietarios</a></li>
+        <li><a class="menu-enlace" href="mascotas-listado.html">Mascotas</a></li>
+        <li><a class="menu-enlace" href="citas-nueva.html">Agendar cita</a></li>
+        <li><a class="menu-enlace" href="citas-listado.html">Citas</a></li>
+        <li><a class="menu-enlace borde-blanco" href="../index.html">Cerrar sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="contenido">
+    <section>
+      <h1>Eliminar propietario</h1>
+      <article class="p-l redondeado fondo-superficie sombra borde-izq-peligro">
+        <h2 class="color-texto-primario-oscuro">¿Desea eliminar a Diego Salazar Ortiz?</h2>
+        <dl class="datos">
+        <dt>Cédula</dt>
+        <dd>1745678901</dd>
+        <dt>Celular</dt>
+        <dd>0965432109</dd>
+        <dt>Correo</dt>
+        <dd>diego.salazar@correo.ec</dd>
+        <dt>Mascotas registradas</dt>
+        <dd>Ninguna</dd>
+        </dl>
+        <p>Solo se pueden eliminar propietarios sin mascotas registradas. Esta acción no se puede deshacer.</p>
+      </article>
+      <form action="propietarios-listado.html" method="get" class="flex flex-envolver gap-m mt-m">
+        <button type="submit" class="boton boton-peligro">Confirmar</button>
+        <a class="boton boton-secundario" href="propietarios-listado.html">Cancelar</a>
+      </form>
+    </section>
+  </main>
+  <footer class="p-m texto-centrado color-texto-blanco fondo-primario-oscuro">
+    <p>VetCare · Clínica veterinaria “Huellitas” · Quito, 2026</p>
+  </footer>
+</body>
+</html>
