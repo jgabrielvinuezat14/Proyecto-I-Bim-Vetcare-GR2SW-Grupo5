@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar mascota | VetCare</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+<header class="flex flex-envolver items-centro justify-espaciado gap-m py-m px-l fondo-primario movil-columna movil-items-inicio">
+    <a class="texto-xl texto-negrita color-texto-blanco sin-subrayado" href="recepcion-inicio.html">VetCare <span class="bloque texto-sm texto-normal">Clínica Huellitas</span></a>
+    <nav aria-label="Menú de recepción">
+        <ul class="flex flex-envolver gap-s lista-sin-estilo">
+            <li><a class="menu-enlace" href="recepcion-inicio.html">Inicio</a></li>
+            <li><a class="menu-enlace" href="propietarios-listado.html">Propietarios</a></li>
+            <li><a class="menu-enlace" href="mascotas-listado.html">Mascotas</a></li>
+            <li><a class="menu-enlace" href="citas-nueva.html">Agendar cita</a></li>
+            <li><a class="menu-enlace" href="citas-listado.html">Citas</a></li>
+            <li><a class="menu-enlace borde-blanco" href="../index.html">Cerrar sesión</a></li>
+        </ul>
+    </nav>
+</header>
+<main class="contenido">
+    <section>
+        <h1>Editar mascota</h1>
+        <form action="mascotas-listado.html" method="get" class="grid gap-l">
+            <fieldset>
+                <legend>Datos de la mascota</legend>
+                <div class="flex flex-columna gap-xs">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required minlength="2" maxlength="40" placeholder="Toby" value="Toby">
+                </div>
+                <div class="flex flex-columna gap-xs">
+                    <label for="especie">Especie</label>
+                    <select id="especie" name="especie" required>
+                        <option value="">Seleccione la especie</option>
+                        <option value="Perro" selected>Perro</option>
+                        <option value="Gato">Gato</option>
+                        <option value="Ave">Ave</option>
+                        <option value="Roedor">Roedor</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+                <div class="flex flex-columna gap-xs">
+                    <label for="raza">Raza</label>
+                    <input type="text" id="raza" name="raza" list="razas" maxlength="40" placeholder="Labrador" value="Labrador">
+                    <datalist id="razas">
+                        <option value="Labrador"></option>
+                        <option value="Poodle"></option>
+                        <option value="Mestizo"></option>
+                        <option value="Siamés"></option>
+                        <option value="Loro amazónico"></option>
+                        <option value="Cuy"></option>
+                    </datalist>
+                </div>
+                <div class="flex flex-columna gap-xs">
+                    <label for="nacimiento">Fecha de nacimiento</label>
+                    <input type="date" id="nacimiento" name="nacimiento" max="2026-11-18" value="2020-03-15">
+                </div>
+                <div class="flex flex-columna gap-xs">
+                    <label for="peso">Peso (kg)</label>
+                    <input type="number" id="peso" name="peso" required min="0.1" max="120" step="0.1" placeholder="28.5" value="28.5">
+                </div>
+                <fieldset class="flex flex-envolver items-centro gap-s p-m">
+                    <legend>Sexo</legend>
+                    <input type="radio" id="macho" name="sexo" value="Macho" required checked>
+                    <label for="macho">Macho</label>
+                    <input type="radio" id="hembra" name="sexo" value="Hembra">
+                    <label for="hembra">Hembra</label>
+                </fieldset>
+                <div class="flex items-centro gap-s">
+                    <input type="checkbox" id="esterilizado" name="esterilizado" checked>
+                    <label for="esterilizado">Esterilizado/a</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Propietario</legend>
+                <div class="flex flex-columna gap-xs">
+                    <label for="propietario">Propietario</label>
+                    <select id="propietario" name="propietario" required>
+                        <option value="">Seleccione el propietario</option>
+                        <option value="1712345678" selected>Carlos Andrade Mora (1712345678)</option>
+                        <option value="1723456789">María Fernanda López (1723456789)</option>
+                        <option value="1704567890">Jorge Paredes Villacís (1704567890)</option>
+                        <option value="1756789012">Ana Lucía Cevallos (1756789012)</option>
+                        <option value="1745678901">Diego Salazar Ortiz (1745678901)</option>
+                    </select>
+                </div>
+                <div class="flex flex-columna gap-xs col-completa">
+                    <label for="observaciones">Observaciones</label>
+                    <textarea id="observaciones" name="observaciones" rows="3" maxlength="300" placeholder="Alergias, comportamiento u otros datos útiles">Alérgico a la penicilina.</textarea>
+                </div>
+            </fieldset>
+            <div class="flex flex-envolver gap-m mt-m">
+                <button type="submit" class="boton">Guardar cambios</button>
+                <a class="boton boton-secundario" href="mascotas-listado.html">Cancelar</a>
+            </div>
+        </form>
+    </section>
+</main>
+<footer class="p-m texto-centrado color-texto-blanco fondo-primario-oscuro">
+    <p>VetCare · Clínica veterinaria “Huellitas” · Quito, 2026</p>
+</footer>
+</body>
+</html>

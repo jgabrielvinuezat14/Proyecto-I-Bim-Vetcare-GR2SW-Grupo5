@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar atención médica | VetCare</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+<header class="flex flex-envolver items-centro justify-espaciado gap-m py-m px-l fondo-primario movil-columna movil-items-inicio">
+    <a class="texto-xl texto-negrita color-texto-blanco sin-subrayado" href="veterinario-inicio.html">VetCare <span class="bloque texto-sm texto-normal">Clínica Huellitas</span></a>
+    <nav aria-label="Menú del veterinario">
+        <ul class="flex flex-envolver gap-s lista-sin-estilo">
+            <li><a class="menu-enlace" href="veterinario-inicio.html">Inicio</a></li>
+            <li><a class="menu-enlace" href="agenda-dia.html">Mi agenda</a></li>
+            <li><a class="menu-enlace" href="historial-clinico.html">Historial clínico</a></li>
+            <li><a class="menu-enlace borde-blanco" href="../index.html">Cerrar sesión</a></li>
+        </ul>
+    </nav>
+</header>
+<main class="contenido">
+    <div class="grid gap-l escritorio-grid-3-1">
+        <section>
+            <h1>Registrar atención médica</h1>
+            <form action="agenda-dia.html" method="get" class="grid gap-l">
+                <fieldset>
+                    <legend>Datos de la cita</legend>
+                    <div class="flex flex-columna gap-xs">
+                        <label for="mascota">Mascota</label>
+                        <input type="text" id="mascota" name="mascota" value="Toby (Perro, Labrador)" readonly>
+                    </div>
+                    <div class="flex flex-columna gap-xs">
+                        <label for="propietario">Propietario</label>
+                        <input type="text" id="propietario" name="propietario" value="Carlos Andrade Mora" readonly>
+                    </div>
+                    <div class="flex flex-columna gap-xs">
+                        <label for="servicio">Servicio</label>
+                        <input type="text" id="servicio" name="servicio" value="Consulta general" readonly>
+                    </div>
+                    <div class="flex flex-columna gap-xs">
+                        <label for="fechahora">Fecha y hora</label>
+                        <input type="text" id="fechahora" name="fechahora" value="2026-11-18 09:00" readonly>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Examen</legend>
+                    <div class="flex flex-columna gap-xs">
+                        <label for="peso">Peso (kg)</label>
+                        <input type="number" id="peso" name="peso" required min="0.1" max="120" step="0.1" value="28.0">
+                    </div>
+                    <div class="flex flex-columna gap-xs">
+                        <label for="temperatura">Temperatura (°C)</label>
+                        <input type="number" id="temperatura" name="temperatura" min="30" max="45" step="0.1" placeholder="38.5">
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Diagnóstico y tratamiento</legend>
+                    <div class="flex flex-columna gap-xs col-completa">
+                        <label for="diagnostico">Diagnóstico</label>
+                        <textarea id="diagnostico" name="diagnostico" rows="3" required minlength="10" maxlength="500" placeholder="Describa el diagnóstico"></textarea>
+                    </div>
+                    <div class="flex flex-columna gap-xs col-completa">
+                        <label for="tratamiento">Tratamiento</label>
+                        <textarea id="tratamiento" name="tratamiento" rows="3" required minlength="5" maxlength="500" placeholder="Medicamentos, dosis y duración"></textarea>
+                    </div>
+                    <div class="flex flex-columna gap-xs col-completa">
+                        <label for="indicaciones">Indicaciones al propietario</label>
+                        <textarea id="indicaciones" name="indicaciones" rows="2" maxlength="300" placeholder="Cuidados en casa"></textarea>
+                    </div>
+                    <div class="flex flex-columna gap-xs">
+                        <label for="control">Próximo control</label>
+                        <input type="date" id="control" name="control" min="2026-11-18">
+                    </div>
+                    <div class="flex items-centro gap-s">
+                        <input type="checkbox" id="vacuna" name="vacuna">
+                        <label for="vacuna">Se aplicó vacuna</label>
+                    </div>
+                </fieldset>
+                <div class="flex flex-envolver gap-m mt-m">
+                    <button type="submit" class="boton">Guardar atención</button>
+                    <a class="boton boton-secundario" href="agenda-dia.html">Cancelar</a>
+                </div>
+            </form>
+        </section>
+        <aside class="p-l borde-izq-acento redondeado fondo-superficie sombra alinear-inicio">
+            <h2>Últimas atenciones de Toby</h2>
+            <ul class="grid gap-s pl-l">
+                <li><strong>2026-09-02</strong> · Vacunación · 28.0 kg</li>
+                <li><strong>2026-05-14</strong> · Otitis externa leve · 27.6 kg</li>
+                <li><strong>2025-12-03</strong> · Desparasitación · 27.1 kg</li>
+            </ul>
+            <a class="boton boton-secundario" href="historial-clinico.html">Ver historial completo</a>
+        </aside>
+    </div>
+</main>
+<footer class="p-m texto-centrado color-texto-blanco fondo-primario-oscuro">
+    <p>VetCare · Clínica veterinaria “Huellitas” · Quito, 2026</p>
+</footer>
+</body>
+</html>

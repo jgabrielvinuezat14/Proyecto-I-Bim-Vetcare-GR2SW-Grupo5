@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mascotas | VetCare</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+<header class="flex flex-envolver items-centro justify-espaciado gap-m py-m px-l fondo-primario movil-columna movil-items-inicio">
+    <a class="texto-xl texto-negrita color-texto-blanco sin-subrayado" href="recepcion-inicio.html">VetCare <span class="bloque texto-sm texto-normal">Clínica Huellitas</span></a>
+    <nav aria-label="Menú de recepción">
+        <ul class="flex flex-envolver gap-s lista-sin-estilo">
+            <li><a class="menu-enlace" href="recepcion-inicio.html">Inicio</a></li>
+            <li><a class="menu-enlace" href="propietarios-listado.html">Propietarios</a></li>
+            <li><a class="menu-enlace" href="mascotas-listado.html" aria-current="page">Mascotas</a></li>
+            <li><a class="menu-enlace" href="citas-nueva.html">Agendar cita</a></li>
+            <li><a class="menu-enlace" href="citas-listado.html">Citas</a></li>
+            <li><a class="menu-enlace borde-blanco" href="../index.html">Cerrar sesión</a></li>
+        </ul>
+    </nav>
+</header>
+<main class="contenido">
+    <section>
+        <div class="flex flex-envolver items-centro justify-espaciado gap-m mb-m">
+            <h1 class="m-0">Mascotas</h1>
+            <a class="boton" href="mascotas-nueva.html">Nueva mascota</a>
+        </div>
+        <form action="mascotas-listado.html" method="get" class="flex flex-envolver items-centro gap-s mb-m movil-columna movil-estirar" role="search">
+            <label for="buscar">Buscar mascota</label>
+            <input type="search" class="flex-crecer" id="buscar" name="q" maxlength="40" placeholder="Nombre de mascota o cédula">
+            <button type="submit" class="boton boton-secundario">Buscar</button>
+        </form>
+        <table class="tabla">
+            <caption>Mascotas registradas</caption>
+            <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Especie</th>
+                <th scope="col">Raza</th>
+                <th scope="col">Propietario</th>
+                <th scope="col">Peso (kg)</th>
+                <th scope="col">Acciones</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">Toby</th>
+                <td>Perro</td>
+                <td>Labrador</td>
+                <td>Carlos Andrade Mora</td>
+                <td>28.5</td>
+                <td><a class="enlace" href="mascotas-detalle.html">Ver</a> <a class="enlace" href="mascotas-editar.html">Editar</a> <a class="enlace enlace-peligro" href="mascotas-eliminar.html">Eliminar</a></td>
+            </tr>
+            <tr>
+                <th scope="row">Mishi</th>
+                <td>Gato</td>
+                <td>Mestizo</td>
+                <td>Carlos Andrade Mora</td>
+                <td>4.2</td>
+                <td><a class="enlace" href="mascotas-detalle.html">Ver</a> <a class="enlace" href="mascotas-editar.html">Editar</a> <a class="enlace enlace-peligro" href="mascotas-eliminar.html">Eliminar</a></td>
+            </tr>
+            <tr>
+                <th scope="row">Luna</th>
+                <td>Perro</td>
+                <td>Poodle</td>
+                <td>María Fernanda López</td>
+                <td>6.8</td>
+                <td><a class="enlace" href="mascotas-detalle.html">Ver</a> <a class="enlace" href="mascotas-editar.html">Editar</a> <a class="enlace enlace-peligro" href="mascotas-eliminar.html">Eliminar</a></td>
+            </tr>
+            <tr>
+                <th scope="row">Kiwi</th>
+                <td>Ave</td>
+                <td>Loro amazónico</td>
+                <td>Jorge Paredes Villacís</td>
+                <td>0.4</td>
+                <td><a class="enlace" href="mascotas-detalle.html">Ver</a> <a class="enlace" href="mascotas-editar.html">Editar</a> <a class="enlace enlace-peligro" href="mascotas-eliminar.html">Eliminar</a></td>
+            </tr>
+            <tr>
+                <th scope="row">Copito</th>
+                <td>Roedor</td>
+                <td>Cuy</td>
+                <td>Ana Lucía Cevallos</td>
+                <td>1.1</td>
+                <td><a class="enlace" href="mascotas-detalle.html">Ver</a> <a class="enlace" href="mascotas-editar.html">Editar</a> <a class="enlace enlace-peligro" href="mascotas-eliminar.html">Eliminar</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
+<footer class="p-m texto-centrado color-texto-blanco fondo-primario-oscuro">
+    <p>VetCare · Clínica veterinaria “Huellitas” · Quito, 2026</p>
+</footer>
+</body>
+</html>
