@@ -20,7 +20,6 @@
 
   /* Tipografía */
   --fuente-base: "Nunito", "Segoe UI", Arial, sans-serif;
-  --fuente-mono: "Courier New", monospace;
   --texto-sm: 0.85rem;
   --texto-md: 1rem;
   --texto-lg: 1.25rem;
@@ -76,7 +75,6 @@ h2{
 .texto-xl{font-size: var(--texto-xl);}
 .texto-normal{font-weight: 400;}
 .texto-negrita{font-weight: 700;}
-.texto-mono{font-family: var(--fuente-mono);}
 .texto-centrado{text-align: center;}
 .sin-subrayado{text-decoration: none;}
 
@@ -105,6 +103,8 @@ h2{
 .grid-auto-14{grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));}
 .col-completa{grid-column: 1 / -1;}
 .ancho-total{width: 100%;}
+.ancho-max-32{width: 100%; max-width: 32rem;}
+.mx-auto{margin-left: auto; margin-right: auto;}
 
 /* ---------- 6. Utilidades: márgenes, rellenos y separación ---------- */
 .m-0{margin: 0;}
@@ -429,11 +429,8 @@ textarea:user-invalid {
   :root {
     --texto-titulo: 2rem;
   }
-
   .contenido {
     padding: var(--espacio-xl);
   }
-
-  .escritorio-grid-2-1 { grid-template-columns: 2fr 1fr; }
   .escritorio-grid-3-1 { grid-template-columns: 3fr 1fr; }
 }
