@@ -183,6 +183,7 @@ h2{
 }
 
 .boton-secundario {
+  border-style: dashed;
   background-color: var(--color-superficie);
   color: var(--color-primario);
 }
@@ -287,8 +288,10 @@ fieldset {
   gap: var(--espacio-m);
   margin: 0;
   padding: var(--espacio-l);
-  border: 1px solid var(--color-borde);
+  border: 2px dashed var(--color-primario);
   border-radius: var(--radio);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
   background-color: var(--color-superficie);
 }
 
@@ -338,7 +341,9 @@ input[readonly] {
 input:required,
 select:required,
 textarea:required {
-  border-left-width: 6px;
+  border-left-color: var(--color-primario);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 input:valid:not(:placeholder-shown),
@@ -364,7 +369,6 @@ textarea:user-invalid {
   width: 100%;
   border-collapse: collapse;
   background-color: var(--color-superficie);
-  box-shadow: var(--sombra);
 }
 
 .tabla caption {
@@ -377,8 +381,13 @@ textarea:user-invalid {
 .tabla th,
 .tabla td {
   padding: var(--espacio-s) var(--espacio-m);
-  border-bottom: 1px solid var(--color-borde);
+  border-bottom: 1px dashed var(--color-borde);
   text-align: left;
+}
+
+.tabla th:not(:first-child),
+.tabla td:not(:first-child) {
+  border-left: 1px dashed var(--color-borde);
 }
 
 .tabla thead th {
@@ -387,6 +396,7 @@ textarea:user-invalid {
 }
 
 .tabla th[scope="row"] {
+  font-weight: 400;
   white-space: nowrap;
 }
 
@@ -394,12 +404,21 @@ textarea:user-invalid {
   transition: background-color var(--transicion);
 }
 
-.tabla tbody tr:nth-child(even) {
-  background-color: var(--color-fila-par);
+.tabla td:last-child .enlace {
+  display: block;
+  text-align: center;
+}
+
+.tabla td:last-child .enlace + .enlace {
+  margin-top: var(--espacio-xs);
 }
 
 .tabla tbody tr:hover {
   background-color: var(--color-fila-hover);
+}
+
+.tabla tbody tr:nth-child(even):hover {
+  background-color: var(--color-fila-par);
 }
 
 /* ---------- 13. Diseño adaptable: móvil (hasta 48rem) ---------- */
