@@ -403,7 +403,6 @@ textarea:user-invalid {
 }
 
 /* ---------- 13. Diseño adaptable: móvil (hasta 48rem) ---------- */
-```css
 @media (max-width: 48rem) {
   .movil-columna { flex-direction: column; }
   .movil-items-inicio { align-items: flex-start; }
