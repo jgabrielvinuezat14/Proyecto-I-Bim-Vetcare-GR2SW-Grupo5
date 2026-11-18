@@ -25,13 +25,17 @@
     <main class="contenido">
         <section>
             <h1>Mi agenda del día</h1>
-            <form action="agenda-dia.html" method="get"
-                class="flex flex-envolver items-centro gap-s mb-m movil-columna movil-estirar">
-                <label for="fecha">Fecha</label>
-                <input type="date" id="fecha" name="fecha" required value="2026-11-18">
-                <input type="checkbox" id="todas" name="todas">
-                <label for="todas">Mostrar también atendidas y canceladas</label>
-                <button type="submit" class="boton boton-secundario">Ver agenda</button>
+            <form action="agenda-dia.html" method="get" class="mb-m">
+                <fieldset class="p-m">
+                    <legend>Consultar agenda</legend>
+                    <div class="col-completa flex flex-envolver items-centro gap-s movil-columna movil-estirar">
+                        <label for="fecha">Fecha</label>
+                        <input type="date" id="fecha" name="fecha" required value="2026-11-18">
+                        <input type="checkbox" id="todas" name="todas">
+                        <label for="todas">Mostrar también atendidas y canceladas</label>
+                        <button type="submit" class="boton boton-secundario">Ver agenda</button>
+                    </div>
+                </fieldset>
             </form>
             <table class="tabla">
                 <caption>Citas programadas de la Dra. Sofía Benítez para el 2026-11-18</caption>

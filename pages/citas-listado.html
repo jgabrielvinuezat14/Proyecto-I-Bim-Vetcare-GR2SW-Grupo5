@@ -31,26 +31,29 @@
                 <a class="boton" href="citas-nueva.html">Nueva cita</a>
             </div>
 
-            <form action="citas-listado.html" method="get" class="grid grid-auto-14 items-fin gap-s mb-m" role="search">
-                <div class="flex flex-columna gap-xs">
-                    <label for="buscar">Mascota o propietario</label>
-                    <input type="search" id="buscar" name="q" maxlength="40"
-                        placeholder="Mascota o cédula del propietario">
-                </div>
-                <div class="flex flex-columna gap-xs">
-                    <label for="fecha">Fecha</label>
-                    <input type="date" id="fecha" name="fecha">
-                </div>
-                <div class="flex flex-columna gap-xs">
-                    <label for="estado">Estado</label>
-                    <select id="estado" name="estado">
-                        <option value="">Todos</option>
-                        <option value="Programada">Programada</option>
-                        <option value="Atendida">Atendida</option>
-                        <option value="Cancelada">Cancelada</option>
-                    </select>
-                </div>
-                <button type="submit" class="boton boton-secundario">Filtrar</button>
+            <form action="citas-listado.html" method="get" class="mb-m" role="search">
+                <fieldset class="grid-auto-14 items-fin gap-s p-m">
+                    <legend>Filtros de citas</legend>
+                    <div class="flex flex-columna gap-xs">
+                        <label for="buscar">Mascota o propietario</label>
+                        <input type="search" id="buscar" name="q" maxlength="40"
+                            placeholder="Mascota o cédula del propietario">
+                    </div>
+                    <div class="flex flex-columna gap-xs">
+                        <label for="fecha">Fecha</label>
+                        <input type="date" id="fecha" name="fecha">
+                    </div>
+                    <div class="flex flex-columna gap-xs">
+                        <label for="estado">Estado</label>
+                        <select id="estado" name="estado">
+                            <option value="">Todos</option>
+                            <option value="Programada">Programada</option>
+                            <option value="Atendida">Atendida</option>
+                            <option value="Cancelada">Cancelada</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="boton boton-secundario">Filtrar</button>
+                </fieldset>
             </form>
             <table class="tabla">
                 <caption>Citas registradas</caption>
